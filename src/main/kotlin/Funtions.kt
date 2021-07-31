@@ -1,5 +1,5 @@
 fun main (){
-    print(maiorAb(5, 3, 5, 1))
+    print(numPositivos())
 }
 
 fun soma(numeroUm: Int, numeroDois: Int): Int {
@@ -32,4 +32,12 @@ fun numImpares() {
 
 fun maiorAb(numA: Int, numB: Int, numC: Int, numD: Int): Boolean {
     return ((numA > numC) and (numA > numD)) || ((numB > numC) and (numB > numD))
+}
+
+fun numPositivos() {
+    loop@ for (i in -100..100){
+        if(i >= 0){
+            println(i)
+        }
+    }
 }
