@@ -1,5 +1,5 @@
 fun main (){
-    print(textosDiferentes("Ricardo", "Ricardo"))
+    print(numPar(6))
 }
 
 fun soma(numeroUm: Int, numeroDois: Int): Int {
@@ -16,4 +16,8 @@ fun maiorNumero(numeroUm: Int, numeroDois: Int, numeroTres: Int): Int {
 
 fun textosDiferentes(textoUm: String, textoDois: String): Boolean {
     return textoUm != textoDois
+}
+
+fun numPar(numero: Int): Boolean {
+    return (numero % 2) == 0
 }
