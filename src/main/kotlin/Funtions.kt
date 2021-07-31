@@ -1,5 +1,5 @@
 fun main (){
-    print(numPar(6))
+    print(numImpares())
 }
 
 fun soma(numeroUm: Int, numeroDois: Int): Int {
@@ -20,4 +20,12 @@ fun textosDiferentes(textoUm: String, textoDois: String): Boolean {
 
 fun numPar(numero: Int): Boolean {
     return (numero % 2) == 0
+}
+
+fun numImpares() {
+    loop@ for (i in 1..100){
+        if(i % 2 == 1){
+            println(i)
+        }
+    }
 }
