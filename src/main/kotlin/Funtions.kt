@@ -1,5 +1,5 @@
 fun main (){
-    print(maiorNumero(11, 12, 10))
+    print(textosDiferentes("Ricardo", "Ricardo"))
 }
 
 fun soma(numeroUm: Int, numeroDois: Int): Int {
@@ -12,5 +12,8 @@ fun maiorNumero(numeroUm: Int, numeroDois: Int, numeroTres: Int): Int {
     } else if (numeroDois >= numeroTres){
         return numeroDois
     } else return numeroTres
+}
 
+fun textosDiferentes(textoUm: String, textoDois: String): Boolean {
+    return textoUm != textoDois
 }
