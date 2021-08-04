@@ -1,13 +1,13 @@
+
 package classes
 
-class Produto(var listaNum: Array<Int> = arrayOf()) {
+class Produto(var listaNumeros: List<Int>){
 
-    fun produtoFinal(listaNum: Array<Int>): Int {
-        var resultado = 1
-        for (i in listaNum) {
-            resultado *= listaNum[i]
+    fun produtoFinal(): Int{
+        var resultado: Int = 1
+        for (num in listaNumeros){
+            resultado *= num
         }
         return resultado
     }
-
 }
