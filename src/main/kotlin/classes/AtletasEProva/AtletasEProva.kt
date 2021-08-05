@@ -1,6 +1,6 @@
 package classes.AtletasEProva
 
-fun main(){
+fun main() {
 
     var atleta1 = Atleta("Ricardo", 10, 10)
     var atleta2 = Atleta("Arthur", 5, 5)
