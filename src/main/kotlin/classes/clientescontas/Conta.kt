@@ -1,6 +1,6 @@
 package classes.clientescontas
 
-class Conta(val numConta: Int, var saldo: Int, titular: Cliente) {
+class Conta(var saldo: Int, titular: Cliente) {
 
     fun deposito(valor: Int) {
         saldo += valor
@@ -14,6 +14,10 @@ class Conta(val numConta: Int, var saldo: Int, titular: Cliente) {
         } else if(valor > saldo){
            println("Saldo insuficiente")
         }
+    }
+
+    fun consultarSaldo(): Int{
+        return saldo
     }
 
 }
