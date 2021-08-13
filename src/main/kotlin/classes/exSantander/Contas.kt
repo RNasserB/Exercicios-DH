@@ -1,8 +1,8 @@
-package classes.clientescontas
+package classes.exSantander
 
-class Conta(var saldo: Double, titular: Cliente) {
+open class Contas(var saldo: Double, cliente: Clientes) {
 
-    fun deposito(valor: Double) {
+    open fun deposito(valor: Double) {
         if (valor > 0) {
             saldo += valor
             return println("Depósito efetuado, Saldo atual: $saldo")
@@ -11,7 +11,7 @@ class Conta(var saldo: Double, titular: Cliente) {
             return println("Valor não disponível para essa operação")
     }
 
-    fun saque(valor: Double) {
+    open fun saque(valor: Double) {
         if (valor <= saldo && valor > 0){
             saldo -= valor
            println("Saque realizado!, Saldo atual: $saldo")
@@ -24,12 +24,13 @@ class Conta(var saldo: Double, titular: Cliente) {
         }
     }
 
-    fun consultarSaldo(): Double{
-        return saldo
+    open fun consultarSaldo() {
+        return println("Saldo: R$ $saldo")
     }
 
-    private fun erroTransacao(){
+    fun erroTransacao(){
         println("Operação não efetuada")
     }
 
+    open fun depositar(valor: Double) {}
 }
