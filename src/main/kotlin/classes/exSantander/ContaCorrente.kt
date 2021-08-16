@@ -2,10 +2,10 @@ package classes.exSantander
 
 class ContaCorrente(
     saldo: Double,
-    clientes: Clientes,
+    cliente: Clientes,
     var chequeEspecial: Double,
     var limiteChequeEspecial: Double
-) : Contas(saldo, clientes) {
+) : Contas(saldo, cliente) {
     init {
         if (chequeEspecial < 0) {
             println("Cheque Especial menor que 0")
@@ -64,7 +64,7 @@ class ContaCorrente(
     }
 
     override fun consultarSaldo() {
-        return println("Saldo: R$ $saldo Cheque Especial: R$ $chequeEspecial")
+        return println("Saldo: R$ $saldo. Cheque Especial: R$ $chequeEspecial")
     }
 }
 
