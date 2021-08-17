@@ -24,5 +24,6 @@ fun bilheteria() {
         IngressoVip(10.0).imprimeValor()
     } else {
         println("Opção inválida")
+        return main()
     }
 }
